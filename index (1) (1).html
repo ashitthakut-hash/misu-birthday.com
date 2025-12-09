@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bisket Birthday</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #FFF8E1;
+        color: #333;
+    }
+
+    header {
+        text-align: center;
+        padding: 25px;
+        background: #FFD700;
+        position: relative;
+    }
+
+    header img {
+        width: 300px;
+        border-radius: 12px;
+        margin-top: 15px;
+    }
+
+    h1, h2 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    section {
+        padding: 25px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .box {
+        background: white;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Gallery */
+    .gallery img {
+        width: 95%;
+        max-width: 300px;
+        border-radius: 10px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Button */
+    .btn {
+        background: #FFB300;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    /* Floating Cake Emoji */
+    .floating-cake {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 45px;
+        animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    /* Confetti */
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        animation: fall 4s linear infinite;
+        top: -20px;
+    }
+
+    @keyframes fall {
+        from { transform: translateY(-100px); }
+        to { transform: translateY(100vh); }
+    }
+
+    /* Guestbook messages */
+    #messages p {
+        background: #FFF1A8;
+        padding: 10px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- CONFETTI -->
+<script>
+function confetti() {
+    for(let i=0;i<40;i++){
+        let c = document.createElement("div");
+        c.classList.add("confetti");
+        c.style.left = Math.random()*window.innerWidth+"px";
+        c.style.background = ["#FFD700","#FF69B4","#FFA500","#87CEFA"][Math.floor(Math.random()*4)];
+        c.style.animationDuration = (3 + Math.random()*3)+"s";
+        document.body.appendChild(c);
+    }
+}
+confetti();
+</script>
+
+<!-- HEADER -->
+<header>
+    <h1>🥳 Ms misu Happy Special Birthday 🎂</h1>
+    <p>You’re more than a friend—you’re the sprinkle of joy in my life.  
+    Grateful for the laughter, adventures, and endless memories.</p>
+
+    <!-- Place your actual image here -->
+    
+</header><input type="image" name="https://uploads.onecompiler.io/446xfzk8q/446xs4fvd/WhatsApp%20Image%202025-12-08%20at%2012.14.35%20PM.jpeg
+" id="https://uploads.onecompiler.io/446xfzk8q/446xs4fvd/WhatsApp%20Image%202025-12-08%20at%2012.14.35%20PM.jpeg
+" src="" alt="" />
+
+<!-- COUNTDOWN -->
+<section>
+    <h2>⏳ Countdown to December 9 (Till Midnight)</h2>
+    <h3 id="countdown" style="font-size:24px;color:#D32F2F;"></h3>
+
+<script>
+    let target = new Date("December 9, 2025 23:59:59").getTime();
+
+    function updateCountdown(){
+        let now = new Date().getTime();
+        let diff = target - now;
+
+        if(diff < 0){
+            document.getElementById("countdown").innerHTML = "🎉 It's Your Special Day, Bisket!";
+            return;
+        }
+
+        let d = Math.floor(diff/(1000*60*60*24));
+        let h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+        let m = Math.floor((diff%(1000*60*60))/(1000*60));
+        let s = Math.floor((diff%(1000*60))/1000);
+
+        document.getElementById("countdown").innerHTML =
+            `${d}d ${h}h ${m}m ${s}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+</script>
+</section>
+
+<!-- HEARTFELT MESSAGE -->
+<section>
+    <h2>💛 A Heartfelt Message</h2>
+    <div class="box">
+        <p>
+        MISU, thanks for being my partner-in-crime.  
+        May this year bring you dreams fulfilled, love that overflows,  
+        and adventures that make you smile.  
+        You deserve all the happiness!
+        </p>
+
+        <p>
+        my favorite memories When I saw you in a saree uske sath Aapka smile uff… aapka first text…  
+        Mujhe laga tha aap ghar par bol denge “fir ghar par Scolding a lot” isliye introduce nahi kiya,  
+        par last mein introduce karna pada.  
+        Wo text humne bahut risk lekar kiya tha—  
+        aur aapne bahut accha se baat kiya… bahut accha laga tha.  
+        uske sath ek or moment tha jab Saraswati Puja 2024 mein jab mile the woh time unforgettable tha.  
+        Tab se ab tak safar perfect nahi raha…  
+        par aap utni hi special ho, jitni pehli baar the.or  
+        Humesha rahenge. ❤️
+        </p>
+    </div>
+</section>
+
+<!-- BLESSINGS -->
+<section>
+    <h2>✨ Blessings & Wishes</h2>
+    <ul>
+        <li>May your path be filled with success, laughter, and warmth. ✨</li>
+        <li>Wishing you health, joy, and a year as sweet as you are! 🍞🩵</li>
+        <li>May every moment be special, just like you.</li>
+    </ul>
+</section>
+
+<!-- MEMORIES -->
+<section>
+    <h2>📸 Memories Gallery</h2>
+    <p>Every time we planned to meet, it got cancelled for some reason or the other.</p>
+</section>
+
+<!-- VIRTUAL GIFT -->
+<section>
+    <h2>🎁 A Virtual Gift</h2>
+    <div class="box">
+        <p><b>Challenge for misu:</b><br>
+        read without breaking-  
+        Pneumonoultramicroscopicsilicovolcanoconiosis! </p>
+    </div>
+</section>
+
+<!-- QUIZ -->
+<section>
+    <h2>🧠 Fun Quiz: Aalu Ka Paratha!</h2>
+    <div class="box">
+        <p><b>Q:</b> Aalu ka paratha sabse tasty kab lagta hai?</p>
+        <button class="btn" onclick="alert('Sahi jawab! Jab Bisket khush ho 😄')">Check Answer</button>
+    </div>
+</section>
+
+<!-- MESSAGE BOARD -->
+<section>
+    <h2>💬 Message Board</h2>
+    <p>Chase your dreams, and make every moment memorable! ✨  
+    Your friendship is the greatest gift of my life. Happy Birthday! 🎉</p>
+
+    <div class="box">
+        <textarea id="guestMsg" placeholder="Write a birthday message... (You're the best!)" style="width:100%;height:80px;border-radius:10px;padding:10px;"></textarea>
+        <br><br>
+        <button class="btn" onclick="postMessage()">Post Message</button>
+        <div id="messages"></div>
+    </div>
+
+<script>
+    function postMessage(){
+        let msg = document.getElementById("guestMsg").value;
+        if(msg.trim() === "") return;
+
+        let p = document.createElement("p");
+        p.textContent = "💛 " + msg;
+        document.getElementById("messages").appendChild(p);
+
+        document.getElementById("guestMsg").value = "";
+    }
+</script>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center;padding:20px;background:#FFD700;margin-top:20px;">
+    <p>Cheers to many more adventures, laughs, and unforgettable moments! ✨🎊 #BisketBirthday</p>
+    <a href="#" class="btn">🎁 Send a Virtual ☺️</a>
+</footer>
+
+<div class="floating-cake">🎂</div>
+
+</body>
+</html>
+<<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All-in-One Wishes Page 🎉</title>
+<style>
+body {margin:0; background:#101726; font-family: 'Poppins', sans-serif; color:#fff;}
+.wrap {max-width:900px; margin:0 auto; padding:25px;}
+h1 {text-align:center; margin-bottom:10px; font-size:32px;}
+h2 {margin-top:0;}
+.section {padding:20px; margin:15px 0; border-radius:12px;}
+.emotional {background:rgba(255,255,255,0.06);}
+.funny {background:rgba(255,196,0,0.08);}
+.gaming {background:rgba(0,149,255,0.08);}
+.motivational {background:rgba(0,255,149,0.08);}
+.bestwishes {background:rgba(149,0,255,0.08);}
+.footer {text-align:center; color:#888; margin-top:30px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+
+<h1>All‑in‑One Blessings • Laughter • Gaming • Motivation • Love</h1>
+<p style="text-align:center; color:#aaa;">A clean, simple website format made for sharing wishes.</p>
+
+
+<div class="section emotional">
+<h2>💙 Emotional Blessing</h2>
+<p>May your life stay filled with people who care, moments that heal, and days that remind you how strong you truly are. You deserve peace, warmth, and every gentle kind of happiness.</p>
+</div>
+
+
+<div class="section funny">
+<h2>🤣 Funny + Loving Message</h2>
+<p>You’re amazing… and also a little crazy (but the good type). May your day be full of snacks, zero drama, and Wi-Fi that actually listens. If joy had a face, it would look exactly like you after eating biryani.</p>
+</div>
+
+
+<div class="section gaming">
+<h2>🎮 Gaming Vibes</h2>
+<p>Life is an open-world game—no map, lots of side quests, random NPCs, and unexpected boss fights. But you? You’ve got legendary-level courage and maxed‑out loyalty stats. Keep leveling up!</p>
+</div>
+
+
+<div class="section motivational">
+<h2>🔥 Motivational Speaker Mode</h2>
+<p>You are built for greatness. Not by chance—by choice. Keep moving, keep rising, keep pushing. Even the strongest storms cannot break a soul that refuses to give up. Your story is still upgrading.</p>
+</div>
+
+
+<div class="section bestwishes">
+<h2>🌟 Best Wishes</h2>
+<p>May your journey be filled with success, laughter, inner strength, and loyal people. You deserve every win that’s coming your way—big or small. Keep shining.</p>
+</div>
+
+
+<div class="footer">Made with ❤️ for someone truly special i'm  Ashit.</div>
+
+
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Special Wishes ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+color: #222;
+}
+header {
+text-align: center;
+padding: 40px 20px;
+}
+h1 {
+font-size: 34px;
+margin-bottom: 10px;
+}
+.container {
+max-width: 900px;
+margin: auto;
+padding: 20px;
+}
+.section {
+background: rgba(255,255,255,0.75);
+padding: 20px;
+margin: 18px 0;
+border-radius: 14px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.section h2 {
+margin-top: 0;
+font-size: 24px;
+color: #444;
+}
+footer {
+text-align: center;
+padding: 15px;
+font-size: 14px;
+color: #444;
+}
+.btn {
+display: inline-block;
+background: #ff4fa7;
+padding: 10px 18px;
+border-radius: 8px;
+color: #fff;
+text-decoration: none;
+margin-top: 10px;
+font-weight: 600;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>💖 Special Wishes For You 💖</h1>
+
+
+
